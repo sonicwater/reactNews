@@ -1,0 +1,19 @@
+.logo{
+	align-items: center;display: flex;margin: 4px;
+}
+
+.logo img{
+	width:40px;height: 40px;
+}
+
+header{
+	font-size: 16px;
+}
+
+.logo span{
+	font-size: 24px;padding-left: 5px;
+}
+
+.footer{
+	text-align: center;font-size: 16px;
+}
