@@ -1,6 +1,9 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { Menu, Icon } from 'antd';
+import { Menu, Icon, Tabs, Message, 
+	Form, Input, Button, CheckBox } from 'antd';
+
+const FormItem = Form.Item;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -8,10 +11,28 @@ export default class PCHeader extends React.Component{
 	constructor(){
 		super();
 		this.state = {
-			current: 'top'
+			current: 'top',
+			modalVisible: false,
+			action: 'login',
+			hasLogined: false,
+			userNickName: '',
+			userId: 0
 		}
 	}
 	render(){
+		// let {getFieldProps} = this.state.form;
+		// const userShow = this.state.hasLogined
+		// ?
+		// <Menu.Item key="logout" className="register">
+		// 	<Button type="primary" htmlType="button">{this.state.userNickName}</Button>
+		// 	&nbsp;&nbsp;
+		// 	<Link target="_blank">
+		// 		<Button type="dashed" htmlType="button">个人中心</Button>
+		// 	</Link>
+		// 	&nbsp;&nbsp;
+		// 	<Button type="ghost" htmlType="button">退出</Button>
+		// </Menu.Item>
+		// :1
 		return(
 			<div>
 				<header>
