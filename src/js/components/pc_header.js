@@ -26,7 +26,7 @@ class PCHeader extends React.Component{
 	}
 
 	handleClick(e){
-		if(e.key="register"){
+		if(e.key=="register"){
 			this.setState({
 				current:"register"
 			})
@@ -39,7 +39,12 @@ class PCHeader extends React.Component{
 	}
 
 	handleSubmit(e){
-
+		e.preventDefault();
+		var myFeachOptions = {
+			methods : 'GET'
+		}
+		var formData = this.props.form.getFieldValue();
+		console.log(formData);
 	}
 
 	render(){
@@ -59,6 +64,8 @@ class PCHeader extends React.Component{
 		// <Menu.Item key="register" className="register">
 		// 	<Icon type="appstore" />注册/登陆
 		// </Menu.Item>;
+
+
 		return(
 			<div>
 				<header>
@@ -101,21 +108,24 @@ class PCHeader extends React.Component{
 								</Menu.Item>
         					</Menu>
 
-        					<Modal title="用户中心" warpClassName="vertical-center-modal" visible={this.state.modalVisible} onCancel = {()=>this.setModalVisible(false)} onOK= {()=>this.setModalVisible(false)} okText="关闭">
+        					<Modal title="用户中心" warpClassName="vertical-center-modal" visible={this.state.modalVisible} onCancel = {()=>this.setModalVisible(false)} onOk= {()=>this.setModalVisible(false)} okText="关闭">
         						<Tabs type="card">
         							<TabPane tab="注册" key="2">
 										<Form layout="inline" onSubmit={this.handleSubmit.bind(this)}>
-											<FormItem label="账户">
-												<Input placeholder="输入您的账号"  />
+											<FormItem label="账户" hasFeedback>
+												<Input placeholder="输入您的账号" />
 											</FormItem>
 											
-											<FormItem label="密码">
+											<FormItem label="密码" hasFeedback>
 												<Input type="password" placeholder="输入您的密码"  />
 											</FormItem>
 											
-											<FormItem label="确认密码">
+											<FormItem label="确认密码" hasFeedback>
 												<Input type="password" placeholder="请再次输入您的密码"  />
 											</FormItem>
+
+											
+
 											
 											<Button type="primary" htmlType="submit">注册
 											</Button>
