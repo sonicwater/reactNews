@@ -7,7 +7,7 @@
 }
 
 header{
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .logo span{
@@ -15,7 +15,7 @@ header{
 }
 
 .footer{
-	text-align: center;font-size: 16px;
+	text-align: center;font-size: 14px;
 }
 
 .pc_news_container{
@@ -36,4 +36,10 @@ header{
 
 .ant-carousel .slick-slide h3 {
   color: #fff;
+}
+
+.tabs_news{
+	float: left;
+	width: 400px;
+	margin: 0 10px;
 }

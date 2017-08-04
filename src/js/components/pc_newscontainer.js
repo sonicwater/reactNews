@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { Tabs, Carousel } from 'antd';
 const TabPane = Tabs.TabPane
+import PCNewsBlock from './pc_news_block';
 
 export default class PCNewsContainer extends React.Component{
 	// function onChange(a, b, c) {
@@ -31,6 +32,12 @@ export default class PCNewsContainer extends React.Component{
 								</Carousel>
 			      			</div>
 			      		</div>
+			      		<Tabs className="tabs_news">
+			      			<TabPane tab="新闻" key="1">
+			      				<PCNewsBlock width="100%" bordered="false" />
+			      			</TabPane>
+			      		</Tabs>
+			      		
 			      	</Col>
 			      	<Col span={2}></Col>
 			    </Row>
