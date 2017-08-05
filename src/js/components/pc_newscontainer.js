@@ -3,6 +3,7 @@ import { Row, Col } from 'antd';
 import { Tabs, Carousel } from 'antd';
 const TabPane = Tabs.TabPane
 import PCNewsBlock from './pc_news_block';
+import PCNewsImageBlock from './pc_news_image_block';
 
 export default class PCNewsContainer extends React.Component{
 	// function onChange(a, b, c) {
@@ -30,7 +31,9 @@ export default class PCNewsContainer extends React.Component{
 								    	<img src="./src/images/news_04.jpeg" width="380" height="200" />
 								    </div>
 								</Carousel>
+								<PCNewsImageBlock count={6} type="guoji" width="100%" bordered="false" cartTitle="国际头条" imageWidth="155px" />
 			      			</div>
+			      			
 			      		</div>
 			      		<Tabs className="tabs_news">
 			      			<TabPane tab="新闻" key="1">

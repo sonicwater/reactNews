@@ -18,13 +18,19 @@ header{
 	text-align: center;font-size: 14px;
 }
 
+.container{
+
+}
+
+		
+
 .pc_news_container{
 	margin: 10px auto;
 }
 
 /* For demo */
 .leftContainer, .carousel{
-	width: 380px;height: 200px;float: left;
+	width: 380px;float: left;
 }
 .ant-carousel .slick-slide {
   text-align: center;
@@ -42,4 +48,8 @@ header{
 	float: left;
 	width: 400px;
 	margin: 0 10px;
+}
+
+.imageblock{
+	float: left;margin:0 10px 10px 0; 
 }
